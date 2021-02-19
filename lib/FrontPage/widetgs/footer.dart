@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:third/LogIn/_login_screen.dart';
 
 class Footer extends StatelessWidget {
   @override
@@ -15,7 +16,10 @@ class Footer extends StatelessWidget {
           Container(
             margin: EdgeInsets.only(left: 5),
             child: InkWell(
-              onTap: () => {},
+              onTap: () => {
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (_) => LogInScreen()))
+              },
               child: Text(
                 'Log-in',
                 style: TextStyle(color: Colors.orange[600]),

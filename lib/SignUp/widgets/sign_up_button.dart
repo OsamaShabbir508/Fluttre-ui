@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:third/Signup/SignUpScreen.dart';
 
-class SignUpButton extends StatelessWidget {
+class Signup extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      child: Container(
+    return Container(
         alignment: Alignment.center,
         height: 60,
         width: 250,
@@ -14,16 +12,14 @@ class SignUpButton extends StatelessWidget {
             gradient: LinearGradient(
                 begin: Alignment.topLeft,
                 colors: [Colors.orange[300], Colors.orange[900]])),
-        child: Text(
-          'SIGN-UP',
-          style: TextStyle(
-            color: Colors.white,
+        child: InkWell(
+          child: Text(
+            'SIGN-UP',
+            style: TextStyle(
+              color: Colors.white,
+            ),
           ),
-        ),
-      ),
-      onTap: () => {
-        Navigator.push(context, MaterialPageRoute(builder: (_) => SignUp())),
-      },
-    );
+          onTap: () => {},
+        ));
   }
 }
